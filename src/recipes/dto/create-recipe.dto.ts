@@ -1,5 +1,4 @@
 export class CreateRecipeDto {
-  id: number;
   title: string;
   making_time: string;
   serves: string;
