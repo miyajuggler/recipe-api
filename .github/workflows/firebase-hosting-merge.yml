@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - run: npm install -g @nestjs/cli # Add this step to install the NestJS CLI
+      - run: npm ci # Ensure dependencies are installed cleanly
       - run: npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
