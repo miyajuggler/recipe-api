@@ -15,16 +15,19 @@ import { UpdateRecipeDto } from './dto/update-recipe.dto';
 export class RecipesController {
   constructor(private readonly recipesService: RecipesService) {}
 
+  // 完成
   @Post()
   create(@Body() createRecipeDto: CreateRecipeDto) {
     return this.recipesService.create(createRecipeDto);
   }
 
+  // 完成
   @Get()
   findAll() {
     return this.recipesService.findAll();
   }
 
+  // 完成
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.recipesService.findOne(+id);
